@@ -16,7 +16,11 @@ app.get("/", (req, res) => {
 //middleware
 app.use(
   cors({
-    origin: "https://reservation-clieant.onrender.com",
+    origin: [
+      "https://reservation-clieant.onrender.com",
+      "http://localhost:5173",
+      "https://shaaj.onrender.com",
+    ],
   })
 );
 app.use(express.json());
